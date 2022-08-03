@@ -1,0 +1,222 @@
+body{
+    display: flex;
+    height: 200vh;
+    background: -webkit-linear-gradient(
+        to top,
+        blue,
+        black
+    );
+    background: linear-gradient(
+        to top,
+        blue,
+        black
+    );
+}
+header{
+    border: 1px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-bottom: 40px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+header .xm{
+   margin-left: 20px;
+   margin-top: 20px;
+}
+header ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header ul li{
+    list-style: none;
+    margin-left: 20px;
+}
+header ul li a{
+    text-decoration: none;
+    padding: 6px 15px;
+    color: white;
+    border-radius: 20px;
+    transition: 0.9s;
+}
+header ul li a:hover,
+header ul li a.active
+{
+    background: white;
+    color: aqua;
+}
+body .menu_bottom .menu_song{
+    display: flexbox;
+    float:left;
+    margin: 20px;
+    border-radius: 50px;
+    width: 250px;
+    height: 250px;
+    border: 4px solid green;
+    margin-top: 100px;
+    cursor: pointer;
+    background: black;
+    transition: 0.8s;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.menu_song:hover{
+    box-sizing: 99px;
+    font-size: 50px;
+    box-shadow: 0 0 10px white,
+                0 0 20px white,
+                0 0 40px white;
+    
+}
+h3{
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-size: 30px;
+    color: white;   
+}
+img{
+    border-radius: 45px;
+    object-fit: cover;
+}
+.player{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    height: 50vh;
+}
+.wrapper{
+    width: 400px;
+    border-radius: 15px;
+    padding: 90px 30px;
+    background-color: white;
+    box-shadow: 0px 6px 16px var(--lightbshadow);
+}
+.wrapper i{
+    cursor: pointer;
+}
+.top, .progress_area .timer, .controls{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.top i{
+    font-size: 30px;
+    color: var(--lightblack)
+}
+.img1{
+    height: 256px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0px 6px 12px var(--lightbshadow);
+}
+.img1 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.song_details{
+    text-align: center;
+    margin: 10px 0;
+}
+.song_details .name{
+    font-size: 21px;
+}
+.song_details .artist{
+    font-size: 18px;
+}
+.progress_area{
+    height: 6px;
+    width: 100%;
+    background: gainsboro;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.progress_area .progress_bar{
+    height: inherit;
+    width: 50%;
+    border-radius: inherit;
+    position: relative;
+    background: red;
+}
+.progress_bar::before{
+    content: "";
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    background: black;
+    border-radius: inherit;
+    top: 50%;
+    right: -5px;
+    transform: translateY(-50%);
+    background: inherit;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+.progress_area:hover .progress_bar::before{
+    opacity: 1;
+}
+.progress_area .timer{
+    margin-top: 2px;
+}
+.timer span{
+    font-size: 13px;
+    color: var(--lightblack);
+}
+.controls{
+    margin: 40px 0 5px 0;
+}
+.controls i{
+    font-size: 28px;
+    user-select: none;
+    background: black;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent;
+}
+.controls i:nth-child(2),
+.controls i:nth-child(4){
+    font-size: 43px;
+}
+.controls #prev{
+    margin-right: -13px;
+}
+.controls #next{
+    margin-left: -13px;
+}
+.controls .play-pause{
+    height: 54px;
+    width: 54px;
+    background: linear-gradient(blue, red);
+    box-shadow: 0px 0px 5px var(--pink);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.play-pause::before{
+    content: "";
+    position: absolute;
+    height: 43px;
+    width: 43px;
+    border-radius: inherit;
+    background: black;
+}
+.play-pause i{
+    height: 43px;
+    width: 43px;
+    line-height: 43px;
+    text-align: center;
+    border-radius: inherit;
+    background-clip: text;
+    background: inherit;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent;
+}
